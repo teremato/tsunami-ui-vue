@@ -1,0 +1,81 @@
+@mixin default-options($width: 1em, $height: 1em) {
+    cursor: pointer;
+
+    width: $width;
+    height: $height;
+
+    transition: .1s;
+}
+@mixin icon-settings($stroke: $tsu-primary, $fill: $tsu-primary) {
+    .tsu-checkbox-icon {
+        stroke: $stroke;
+        fill: $fill;
+        @content;
+    }
+}
+@mixin hover($color) {
+    &:enabled:hover {
+
+        $lightColor: lighten($color, $amount: 30);
+
+        @include icon-settings(lightColor, lightColor);
+        border-color: $lightColor;
+        background-color: $lightColor;
+    }
+}
+
+@keyframes checked {
+    from { box-shadow: 0px 0px 0px 0.3em transparentize($tsu-succes, $amount: 0.4); }
+    to { box-shadow: 0px 0px 0px 0.2em transparentize($tsu-succes, $amount: 1) }
+}
+
+
+/* BASIC CHECKBOX STYLES */
+.tsu-checkbox {
+    @include default-options(1.5em, 1.5em);
+    @include hover($tsu-primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+    border: 3px solid $tsu-primary;
+
+    &-disabled { opacity: .6; }
+}
+.tsu-checkbox-toggle {
+    @include icon-settings($tsu-succes, transparent);
+    @include hover($tsu-succes);
+
+    animation: checked .6s forwards;
+    border-color: $tsu-succes;
+}
+
+/* SWITCH CHECKBOX STYLES */
+.tsu-checkbox-switch {
+    @include default-options(3em, 1.5em);
+    @include icon-settings(#ffff, #ffff) {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        margin-left: .2em;
+        transition: .3s;
+    };
+
+    position: relative;
+
+    border-radius: 20px;
+    background-color: $tsu-primary;
+}
+.tsu-checkbox-switch-toggle {
+    @include icon-settings(#ffff, #ffff) {
+        transform: translate(146%, -50%);
+
+        margin-right: .2em;
+    }
+
+    animation: checked .6s forwards;
+    background-color: $tsu-succes;
+}

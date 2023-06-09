@@ -1,0 +1,19 @@
+.header {
+    
+    position: fixed;
+    z-index: 2;
+
+    width: 100%;
+
+    color: $tsu-second;
+    background-color: #ffff;
+    box-shadow: $tsu-bottom-shadow;
+    
+    &__wrapper {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    &__logo {
+        margin-left: 1rem;
+    }
+}
