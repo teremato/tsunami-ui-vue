@@ -2,6 +2,13 @@
     gap: 3em;
 }
 
+.checkboxes__group-block {
+    padding: 1em;
+
+    border-radius: 5px;
+    border: 2px solid transparentize($tsu-primary, $amount: 0.9);
+}
+
 .checkboxes__group-select {
 
     display: flex;

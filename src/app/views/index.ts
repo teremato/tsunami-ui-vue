@@ -4,6 +4,7 @@ import {
     BUTTONS_ROUTE,
     CHECBOXES_ROUTE,
     CHECKBOX_GROUP_ROUTE,
+    SELECT_ROUTE,
     routerAlias
 } from './routes';
 
@@ -13,7 +14,8 @@ export {
     HOME_ROUTE,
     BUTTONS_ROUTE,
     CHECBOXES_ROUTE,
-    CHECKBOX_GROUP_ROUTE
+    CHECKBOX_GROUP_ROUTE,
+    SELECT_ROUTE
 } 
 
 export default routerAlias;

@@ -44,12 +44,13 @@ import {
 } from '@/tsunami@UI/components/icons';
 
 
-const props = withDefaults(defineProps<ICheckBoxProps<T>>(), {
-    disabled: false,
-    checked: false,
-    type: 'checkbox',
-    id: 'tsu-checkbox',
-    name: '',
+const props = withDefaults(
+    defineProps<ICheckBoxProps<T>>(), {
+        disabled: false,
+        checked: false,
+        type: 'checkbox',
+        id: 'tsu-checkbox',
+        name: '',
 })
 const emit = defineEmits<{
     (event: 'update:checked', target: boolean): boolean,

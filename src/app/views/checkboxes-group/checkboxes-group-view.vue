@@ -3,11 +3,10 @@
         <section>
             <h1 class="title">Checkbox group</h1>
         </section>
-        <section class="app__view-section app__view-section-inline checkboxes__group-row">
-            <div>
+        <section class="app__view-section app__view-section-block">
+            <div class="checkboxes__group-block">
                 <h3 class="sub-title">Checkbox multiplay</h3>
-                <div 
-                    class="app__view-section-inline checkboxes__group-select">
+                <div class="app__view-section-inline checkboxes__group-select">
                     <div v-for="item in checkboxValueMulti" :key="item.key"
                         class="checkboxes__group-item">
                         {{ item.animal }}
@@ -15,7 +14,7 @@
                 </div>
                 <tsu-checkbox-group
                     v-model="checkboxValueMulti"
-                    direction="col"
+                    direction="row"
                     id="animals_mult" 
                     :options="checkboxOptions">
                     <template #default="{ item }">
@@ -23,7 +22,7 @@
                     </template>
                 </tsu-checkbox-group>
             </div>
-            <div>
+            <div class="checkboxes__group-block">
                 <h3 class="sub-title">Checkbox single</h3>
                 <div
                     class="app__view-section-inline checkboxes__group-select">
@@ -32,7 +31,7 @@
                 <tsu-checkbox-group
                     v-model="checkboxValueSing"
                     mode="single"
-                    direction="col"
+                    direction="row"
                     id="animals_sing" 
                     :options="checkboxOptions">
                     <template #default="{ item }">
@@ -41,11 +40,10 @@
                 </tsu-checkbox-group>
             </div>
         </section>
-        <section class="app__view-section app__view-section-inline checkboxes__group-row">
-            <div>
+        <section class="app__view-section app__view-section-block">
+            <div class="checkboxes__group-block">
                 <h3 class="sub-title">Switch multiplay</h3>
-                <div 
-                    class="app__view-section-inline checkboxes__group-select">
+                <div class="app__view-section-inline checkboxes__group-select">
                     <div v-for="item in switchValueMulti" :key="item.key"
                         class="checkboxes__group-item">
                         {{ item.animal }}
@@ -54,7 +52,7 @@
                 <tsu-checkbox-group
                     v-model="switchValueMulti"
                     type="switch"
-                    direction="col"
+                    direction="row"
                     id="animals_mult-1" 
                     :options="checkboxOptions">
                     <template #default="{ item }">
@@ -62,17 +60,16 @@
                     </template>
                 </tsu-checkbox-group>
             </div>
-            <div>
+            <div class="checkboxes__group-block">
                 <h3 class="sub-title">Switch single</h3>
-                <div
-                    class="app__view-section-inline checkboxes__group-select">
+                <div class="app__view-section-inline checkboxes__group-select">
                     <div>{{ ( switchValueSing) ? switchValueSing.animal : '' }}</div>
                 </div>
                 <tsu-checkbox-group
                     v-model="switchValueSing"
                     type="switch"
                     mode="single"
-                    direction="col"
+                    direction="row"
                     id="animals_sing-1" 
                     :options="checkboxOptions">
                     <template #default="{ item }">
@@ -81,11 +78,10 @@
                 </tsu-checkbox-group>
             </div>
         </section>
-        <section class="app__view-section app__view-section-inline checkboxes__group-row">
-            <div>
+        <section class="app__view-section app__view-section-block">
+            <div class="checkboxes__group-block">
                 <h3 class="sub-title">Radio multiplay</h3>
-                <div 
-                    class="app__view-section-inline checkboxes__group-select">
+                <div class="app__view-section-inline checkboxes__group-select">
                     <div v-for="item in radiohValueMulti" :key="item.key"
                         class="checkboxes__group-item">
                         {{ item.animal }}
@@ -94,7 +90,7 @@
                 <tsu-checkbox-group
                     v-model="radiohValueMulti"
                     type="radio"
-                    direction="col"
+                    direction="row"
                     id="animals_mult-2" 
                     :options="checkboxOptions">
                     <template #default="{ item }">
@@ -102,17 +98,16 @@
                     </template>
                 </tsu-checkbox-group>
             </div>
-            <div>
+            <div class="checkboxes__group-block">
                 <h3 class="sub-title">Radio single</h3>
-                <div
-                    class="app__view-section-inline checkboxes__group-select">
+                <div class="app__view-section-inline checkboxes__group-select">
                     <div>{{ ( radioValueSing) ? radioValueSing.animal : '' }}</div>
                 </div>
                 <tsu-checkbox-group
                     v-model="radioValueSing"
                     type="radio"
                     mode="single"
-                    direction="col"
+                    direction="row"
                     id="animals_sing-2" 
                     :options="checkboxOptions">
                     <template #default="{ item }">
