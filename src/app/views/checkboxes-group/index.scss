@@ -1,0 +1,26 @@
+.checkboxes__group-row {
+    gap: 3em;
+}
+
+.checkboxes__group-block {
+    padding: 1em;
+
+    border-radius: 5px;
+    border: 2px solid transparentize($tsu-primary, $amount: 0.9);
+}
+
+.checkboxes__group-select {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    height: 2em;
+
+    padding-left: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+
+    color: $tsu-primary;
+    background-color: transparentize($tsu-primary, $amount: .8);
+}
