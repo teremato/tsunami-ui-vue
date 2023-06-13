@@ -3,15 +3,16 @@
 //TODO: Написать отдельную папку untils для tsunami@UI
 
 export interface IOption {
-    key: string | number
+    key: string | number,
+    disabled?: boolean 
 }
 
 export interface ISelectProps<T> {
-    modelValue?: T,
+    modelValue?: T | T[],
     options: T[],
     defaultValue?: T | null,
     state?: 'success' | 'warning' | 'default',
-    type: 'default' | 'multiplay'
+    type?: 'default' | 'multiplay'
     name?: string,
     placeholder?: string
     reduce: (item: T) => any,

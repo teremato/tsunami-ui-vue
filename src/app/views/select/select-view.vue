@@ -51,6 +51,34 @@
                     :options="arr"/>
             </div>
         </section>
+        <section class="app__view-section">
+            <h3 class="sub-title">Multiplay select</h3>
+            <p class="text">Select has a three state: 
+                <span class="text-primary">default, succes, warning</span>
+            </p>
+            <div class="app__view-section-inline">
+                <tsu-select v-model="multiModel"
+                    type="multiplay"
+                    
+                    placeholder="Выберите юзера"
+                    :reduce="(item) => item.name" 
+                    :options="arr"/>
+                <tsu-select v-model="multiModel"
+                    
+                    type="multiplay"
+                    state="success"
+                    placeholder="Выберите юзера"
+                    :reduce="(item) => item.name" 
+                    :options="arr"/>
+                <tsu-select v-model="multiModel"
+                    
+                    type="multiplay"
+                    state="warning"
+                    placeholder="Выберите юзера"
+                    :reduce="(item) => item.name" 
+                    :options="arr"/>
+            </div>
+        </section>
     </div>
 </template>
 
@@ -58,6 +86,7 @@
 import { tsuSelect } from '@/tsunami@UI/components';
 import { ref } from 'vue';
 
+const multiModel = ref<{ key: number, name: string }[]>();
 const model = ref<{ key: number, name: string }>();
 
 const arr: { key: number, name: string }[] = [
