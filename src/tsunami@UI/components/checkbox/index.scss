@@ -29,6 +29,14 @@
     to { box-shadow: 0px 0px 0px 0.2em transparentize($tsu-succes, $amount: 1) }
 }
 
+/* CHECKBOX CONTAINER */
+.tsu-checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    width: min-content;
+}
 
 /* BASIC CHECKBOX STYLES */
 .tsu-checkbox {
@@ -77,5 +85,33 @@
     }
 
     animation: checked .6s forwards;
+    background-color: $tsu-succes;
+}
+
+/* RADIO CHECKBOX STYLE */
+.tsu-checkbox-radio {
+    @include default-options(1.1em, 1.1em);
+
+
+    border-radius: 50%;
+    border: 2px solid $tsu-primary;
+
+    &-icon {
+        width: .4em;
+        height: .4em;
+
+        border-radius: 50%;
+        background-color: #ffff;
+    }
+}
+.tsu-checkbox-radio-toggle {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    animation: checked .6s forwards;
+
+    border-color: $tsu-succes;
     background-color: $tsu-succes;
 }

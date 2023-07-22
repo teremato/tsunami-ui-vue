@@ -1,0 +1,3 @@
+@function shadow($amount: .8, $height: 0, $width: 0) {
+    @return #{$width}px #{$height}px 19px 2px transparentize(rgba(34, 60, 80), $amount);
+}
